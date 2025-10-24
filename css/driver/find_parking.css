@@ -1,0 +1,133 @@
+/* Tone variables: default Sage */
+:root {
+  --slot-icon: #86efac;         /* Sage icon */
+  --slot-icon-fg: #10b981;      /* Icon foreground */
+  --slot-chip-bg: #f0fdf4;      /* Sage chip background */
+  --slot-chip-text: #14532d;    /* Sage chip text */
+  --slot-border: #bbf7d0;       /* Sage border */
+  --slot-card-bg-top: #f6fdf9;  /* subtle gradient top */
+  --slot-card-bg-bottom: #ffffff; /* subtle gradient bottom */
+  --slot-hover-shadow: rgba(16, 185, 129, .12);
+}
+
+/* Theme: Teal */
+.theme-teal {
+  --slot-icon: #2dd4bf;
+  --slot-chip-bg: #e6fffb;
+  --slot-chip-text: #0f766e;
+  --slot-border: #99f6e4;
+  --slot-hover-shadow: rgba(13, 148, 136, .12);
+}
+
+/* Theme: Blue-accent chip, green cards */
+.theme-blue {
+  --slot-icon: #60a5fa;           /* blue icon */
+  --slot-chip-bg: #e8f1ff;        /* light blue chip */
+  --slot-chip-text: #1e40af;      /* blue text */
+  --slot-border: #bfdbfe;         /* light blue border */
+  --slot-hover-shadow: rgba(37, 99, 235, .12);
+}
+/* Find Parking - mobile-first layout */
+.slot-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 16px;
+  align-items: stretch;
+  justify-items: center;
+}
+
+/* optional breakpoints if container wider than auto-fit baseline */
+@media (min-width: 640px) {
+  .slot-grid { gap: 18px; }
+}
+@media (min-width: 1024px) {
+  .slot-grid { gap: 20px; }
+}
+
+/* cap to 2-3 columns on smaller devices for stronger presence */
+@media (max-width: 480px) {
+  .slot-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  .slot-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+.slot {
+  border: 2px solid #e5e7eb;
+  background: #ffffff;
+  border-radius: 12px; /* milder rounding */
+  padding: 20px 16px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(2, 8, 23, 0.04);
+  transition: transform .12s ease, background .2s ease, box-shadow .2s ease;
+  min-height: 140px;
+  width: 100%;
+  max-width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.slot .icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--slot-icon-fg);
+  margin-bottom: 6px;
+  font-size: 22px;
+}
+.slot .icon.available { background: #dcfce7; }
+.slot .icon.occupied { background: #ef4444; }
+.slot .icon.maintenance { background: #f59e0b; }
+
+.slot .label { font-weight: 800; color: #0f172a; font-size: 20px; letter-spacing: .2px; }
+.slot .status { font-size: 13px; color: #16a34a; background: transparent; padding: 0; border-radius: 0; font-weight: 700; }
+
+/* removed pill style in favor of compact status chip above */
+
+.slot.available { outline: none; border-color: #e5e7eb; background: #ffffff; }
+.slot.available:hover { background: #ffffff; transform: translateY(-2px); box-shadow: 0 12px 22px rgba(2,8,23,.08); }
+
+/* Micro-interactions */
+.slot:active { transform: scale(0.985); }
+.slot.pressed { transform: scale(0.985); }
+
+.slot.occupied { opacity: .6; }
+.slot.maintenance { opacity: .85; }
+
+.btn.btn-primary {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-weight: 600;
+}
+
+.btn.btn-primary:active { transform: translateY(1px); }
+
+/* Legend */
+.legend {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+.legend .dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; margin-right: 6px; }
+.legend .available { background:#22c55e; }
+.legend .occupied { background:#ef4444; }
+.legend .maintenance { background:#f59e0b; }
+
+/* Empty state */
+.notice {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  color: #475569;
+  border-radius: 12px;
+  padding: 14px;
+  text-align: center;
+}
