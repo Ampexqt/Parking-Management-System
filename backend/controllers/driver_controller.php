@@ -53,10 +53,15 @@ function handleDriverRegistration() {
         }
         
         // Validate password strength
-        if (strlen($password) < 6) {
-            throw new Exception('Password must be at least 6 characters long');
+        if (!preg_match('/^(?=.*[A-Za-z])(?=.*\d)\S{8,30}$/', $password)) {
+            throw new Exception('Password must be 8-30 characters with at least one letter and one number. Symbols are allowed.');
         }
-        
+
+        // Validate plate number (letters and numbers only)
+        if (!preg_match('/^[A-Za-z0-9]+$/', $plateNumber)) {
+            throw new Exception('Vehicle plate number must contain only letters and numbers');
+        }
+
         // Get database connection
         $pdo = getDBConnection();
         

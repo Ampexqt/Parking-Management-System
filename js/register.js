@@ -80,6 +80,10 @@ function validateField(field) {
                 showFieldError(field, 'Plate number must be at least 3 characters');
                 return false;
             }
+            if (!isValidPlateNumber(value)) {
+                showFieldError(field, 'Plate number must contain only letters and numbers');
+                return false;
+            }
             break;
             
         case 'vehicle_type':
@@ -95,7 +99,7 @@ function validateField(field) {
                 return false;
             }
             if (!isValidPassword(value)) {
-                showFieldError(field, 'Password must be 8 alphanumeric characters');
+                showFieldError(field, 'Password must be 8-30 characters with at least one letter and one number. Symbols are allowed.');
                 return false;
             }
             break;
@@ -128,8 +132,13 @@ function isValidEmail(email) {
     return emailRegex.test(email);
 }
 
+function isValidPlateNumber(plateNumber) {
+    const plateRegex = /^[A-Za-z0-9]+$/;
+    return plateRegex.test(plateNumber);
+}
+
 function isValidPassword(password) {
-    const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8}$/;
+    const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[\S]{8,30}$/;
     return passwordRegex.test(password);
 }
 

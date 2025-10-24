@@ -2,10 +2,10 @@
 // Database Configuration for Parking Management System
 
 // Database connection settings
-define('DB_HOST', 'localhost');
-define('DB_NAME', 'parking_system_db');
-define('DB_USER', 'root');
-define('DB_PASS', '');
+define('DB_HOST', 'sql306.infinityfree.com');
+define('DB_NAME', 'if0_40245707_parking_system_db');
+define('DB_USER', 'if0_40245707');
+define('DB_PASS', 'XdGg6V16BXz8Y');
 
 // Database connection options
 define('DB_OPTIONS', [

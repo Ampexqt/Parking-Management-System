@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="ParkSmart icon">
+  <defs>
+    <linearGradient id="gradient-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#1D4ED8"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="url(#gradient-blue)"/>
+  <path fill="#F8FAFC" d="M22 16h16c10.493 0 19 8.507 19 19s-8.507 19-19 19h-9v10h-9V16zm9 11v16h7a8 8 0 0 0 0-16z"/>
+</svg>

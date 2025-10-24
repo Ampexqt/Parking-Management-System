@@ -8,6 +8,7 @@ requireDriver();
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Parking - ParkSmart</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/Icons/favicon.svg">
   <link rel="stylesheet" href="../css/global.css">
   <link rel="stylesheet" href="../css/driver/dashboard.css">
   <link rel="stylesheet" href="../css/driver/find_parking.css">

@@ -35,6 +35,9 @@ ParkSmart is a web-based parking management platform that streamlines on-site op
 - **Database setup**
   - Create a database (default name: `parking_system_db`)
   - Import `database/parking_system_structure_only.sql`
+  - After importing `database/parking_system_db.sql` (or seeding your data), the default admin credentials are:
+    - Username: `admin@parksmart.com`
+    - Password: `Parkadmin123`
   - Update credentials in `backend/config/db.php` if they differ from your environment
 - **Serve the application**
   - Start Apache and MySQL from your stack (WAMP/XAMPP)
