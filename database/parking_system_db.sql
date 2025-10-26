@@ -127,6 +127,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 VALUES
 (1, 'admin@parksmart.com', '$2b$10$gvlX3RmVa67euBZHZnzXOenKnzGTlpw5QQhnKpDVFozV3/o36tBB2', 'Admin', '', 'Admin User', 'admin@parksmart.com', 'admin', 'active', '2025-10-24 23:00:04', '2025-10-23 00:18:20', '2025-10-24 23:01:16');
 
+-- Password = "admin123"
 
 -- --------------------------------------------------------
 
