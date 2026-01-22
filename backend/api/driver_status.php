@@ -100,6 +100,7 @@ function getDBConnection() {
                 PDO::ATTR_EMULATE_PREPARES => false
             ]
         );
+        $pdo->exec("SET time_zone = '+08:00'");
         return $pdo;
     } catch (PDOException $e) {
         throw new Exception('Database connection failed: ' . $e->getMessage());
