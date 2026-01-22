@@ -1,0 +1,7 @@
+# Force treat all PHP files as PHP
+*.php linguist-language=PHP
+
+# (Optionally) treat any .hh/.hhi/.hack files as vendored/ignored
+*.hh linguist-vendored
+*.hhi linguist-vendored
+*.hack linguist-vendored
